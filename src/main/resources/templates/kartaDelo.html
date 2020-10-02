@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 3 Pribula Lukáš</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">ID</th>
+
+        <th class="mdl-data-table__cell--non-numeric">meno</th>
+        <th class="mdl-data-table__cell--non-numeric">priezvisko</th>
+
+        <th class="mdl-data-table__cell--non-numeric">email</th>
+        <th class="mdl-data-table__cell--non-numeric">Detail</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="item: ${delo}">
+        <td th:text="${item.ID}"></td>
+        <td th:text="${item.nazov}"></td>
+
+        <td><a th:href="@{'kartaDela/detail/'+${delo.indexOf(item)}}">detail</a></td>
+
+
+    </tr>
+
+    <tr><td><a th:href="@{'/kartaKomponentov'}">spat</a></td></tr>
+    </tbody>
+</table>
+</body>
+</html>
