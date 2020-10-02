@@ -53,6 +53,7 @@ public class SkuskaApplication implements CommandLineRunner {
         api.vytvorPodvozokPasovy("pas",85,33,55,10);
         api.vytvorLahkyTank("T-21",1,8500,0,0);
         api.vytvorTazkyTank("TAzky",2,3588,1,1);
+        api.vytvorDelostrelectvo("delostrelectvo",1,321,1,1);
 
     }
 
